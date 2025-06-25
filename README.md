@@ -1,3 +1,5 @@
+### Feito Por Gustavo Gomes Contiero SC3037754
+
 # 💬 Projeto de Chat com Sockets TCP
 
 Este projeto é uma aplicação de **chat via terminal**, desenvolvida com **Python** e usando **sockets TCP** para comunicação entre um servidor e múltiplos clientes.
