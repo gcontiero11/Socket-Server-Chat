@@ -21,12 +21,19 @@ def receive_messages(sock: socket.socket):
 def send_messages(sock: socket.socket):
     try:
         while True:
-            msg = input()
+            msg = input("Envie uma mensagem: ")
             if msg.strip() == '':
                 continue
             sock.sendall(msg.encode('utf-8'))
     except (BrokenPipeError, OSError):
         pass
+    except KeyboardInterrupt:
+        try:
+            sock.close()
+        except:
+            pass
+        print("Você se desconectou do servidor")
+        sys.exit(0)
 
 def main():
     name = input("Digite seu nome: ").strip()
@@ -44,7 +51,7 @@ def main():
         sock.sendall((name + '\n').encode('utf-8'))
 
         threading.Thread(target=receive_messages, args=(sock,), daemon=True).start()
-    
+
         send_messages(sock)
 
 if __name__ == '__main__':
