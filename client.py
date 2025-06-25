@@ -32,7 +32,7 @@ def send_messages(sock: socket.socket):
             sock.close()
         except:
             pass
-        print("Você se desconectou do servidor")
+        print("\nVocê se desconectou do servidor")
         sys.exit(0)
 
 def main():
