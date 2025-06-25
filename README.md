@@ -1,4 +1,4 @@
-### Feito Por Gustavo Gomes Contiero SC3037754
+### Feito Por Gustavo Gomes Contiero SC3037754 - Vídeo de apresentação do projeto: https://www.youtube.com/watch?v=JWojEuCA_-0
 
 # 💬 Projeto de Chat com Sockets TCP
 
